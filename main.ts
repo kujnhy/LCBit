@@ -168,10 +168,9 @@ namespace cbit_显示类 {
     }
 
     //% blockId=cbit_RGB3 block="红绿灯|引脚R %pin1|引脚G %pin2|显示 %value"
-    //% weight=1
+    //% weight=11
     //% blockGap=8
     //% color="#C814B8"
-    //% inlineInputMode=inline
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor2): void {
 
