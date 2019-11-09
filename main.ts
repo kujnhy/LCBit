@@ -6,7 +6,10 @@ load dependency
 */
 
 
-namespace cbit_en{
+
+//% color="#C814B8" weight=25 icon="\uf1d4"
+namespace cbit_display {
+
     export enum enColor {
 
         //% blockId="OFF" block="灭"
@@ -39,11 +42,6 @@ namespace cbit_en{
         Yellow,
 
     }
-}
-
-
-//% color="#C814B8" weight=25 icon="\uf1d4"
-namespace cbit_显示类 {
 
     export enum enLED1 {
         
@@ -115,52 +113,52 @@ namespace cbit_显示类 {
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB2(pin1: DigitalPin, pin2: DigitalPin, pin3: DigitalPin, value: cbit_en.enColor): void {
+    export function RGB2(pin1: DigitalPin, pin2: DigitalPin, pin3: DigitalPin, value: enColor): void {
 
         switch (value) {
-            case cbit_en.enColor.OFF: {
+            case enColor.OFF: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case cbit_en.enColor.Red: {
+            case enColor.Red: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case cbit_en.enColor.Green: {
+            case enColor.Green: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case cbit_en.enColor.Blue: {
+            case enColor.Blue: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case cbit_en.enColor.White: {
+            case enColor.White: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case cbit_en.enColor.Cyan: {
+            case enColor.Cyan: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case cbit_en.enColor.Pinkish: {
+            case enColor.Pinkish: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case cbit_en.enColor.Yellow: {
+            case enColor.Yellow: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 0);
@@ -175,25 +173,25 @@ namespace cbit_显示类 {
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: cbit_en.enColor2): void {
+    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor2): void {
 
         switch (value) {
-            case cbit_en.enColor2.OFF: {
+            case enColor2.OFF: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case cbit_en.enColor2.Red: {
+            case enColor2.Red: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case cbit_en.enColor2.Green: {
+            case enColor2.Green: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 break;
             }
-            case cbit_en.enColor2.Yellow: {
+            case enColor2.Yellow: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 break;
@@ -208,7 +206,7 @@ namespace cbit_显示类 {
  ****************************************************************************************************************************************/
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace cbit_传感器类 {
+namespace cbit_sensor {
 
     export enum enVoice {
         //% blockId="Voice" block="有声音"
@@ -306,7 +304,7 @@ namespace cbit_传感器类 {
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace cbit_输入类 {
+namespace cbit_input {
 
     export enum enRocker {
         //% blockId="Nostate" block="无"
@@ -417,7 +415,7 @@ namespace cbit_输入类 {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace cbit_音乐类 {
+namespace cbit_music {
     export enum enBuzzer {
 
         //% blockId="NoBeep" block="响"
@@ -446,7 +444,7 @@ namespace cbit_音乐类 {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace cbit_电机类 {
+namespace cbit_motor {
 
     //% blockId=cbit_Fan block="风扇|引脚 %pin|速度 %value"
     //% weight=100
@@ -475,7 +473,7 @@ namespace cbit_电机类 {
 }
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace cbit_小车类 {
+namespace cbit_car {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
