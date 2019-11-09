@@ -450,7 +450,6 @@ namespace cbit_小车类 {
     const PRESCALE = 0xFE
 
     let initialized = false
-    let yahStrip: neopixel.Strip;
 
     export enum enColor {
 
@@ -904,19 +903,6 @@ namespace cbit_小车类 {
         setPwm(1, 0, G);
         setPwm(2, 0, B);
 
-    }
-
-    //% blockId=cbit_RGB_Car_Program block="七彩流水灯"
-    //% weight=99
-    //% blockGap=10
-    //% color="#C814B8"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Car_Program(): neopixel.Strip {
-         
-        if (!yahStrip) {
-            yahStrip = neopixel.create(DigitalPin.P16, 3, NeoPixelMode.RGB);
-        }
-        return yahStrip;  
     }
 
 
