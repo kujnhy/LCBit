@@ -6,10 +6,7 @@ load dependency
 */
 
 
-
-//% color="#C814B8" weight=25 icon="\uf1d4"
-namespace cbit_显示类 {
-    
+namespace cbit_en{
     export enum enColor {
 
         //% blockId="OFF" block="灭"
@@ -42,6 +39,12 @@ namespace cbit_显示类 {
         Yellow,
 
     }
+}
+
+
+//% color="#C814B8" weight=25 icon="\uf1d4"
+namespace cbit_显示类 {
+
     export enum enLED1 {
         
         //% blockId="OFF" block="灭"
@@ -112,52 +115,52 @@ namespace cbit_显示类 {
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB2(pin1: DigitalPin, pin2: DigitalPin, pin3: DigitalPin, value: enColor): void {
+    export function RGB2(pin1: DigitalPin, pin2: DigitalPin, pin3: DigitalPin, value: cbit_en.enColor): void {
 
         switch (value) {
-            case enColor.OFF: {
+            case cbit_en.enColor.OFF: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case enColor.Red: {
+            case cbit_en.enColor.Red: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case enColor.Green: {
+            case cbit_en.enColor.Green: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 0);
                 break;
             }
-            case enColor.Blue: {
+            case cbit_en.enColor.Blue: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case enColor.White: {
+            case cbit_en.enColor.White: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case enColor.Cyan: {
+            case cbit_en.enColor.Cyan: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case enColor.Pinkish: {
+            case cbit_en.enColor.Pinkish: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 pins.digitalWritePin(pin3, 1);
                 break;
             }
-            case enColor.Yellow: {
+            case cbit_en.enColor.Yellow: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 pins.digitalWritePin(pin3, 0);
@@ -168,29 +171,29 @@ namespace cbit_显示类 {
     }
 
     //% blockId=cbit_RGB3 block="红绿灯|引脚R %pin1|引脚G %pin2|显示 %value"
-    //% weight=11
+    //% weight=6
     //% blockGap=8
     //% color="#C814B8"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor2): void {
+    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: cbit_en.enColor2): void {
 
         switch (value) {
-            case enColor2.OFF: {
+            case cbit_en.enColor2.OFF: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case enColor2.Red: {
+            case cbit_en.enColor2.Red: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case enColor2.Green: {
+            case cbit_en.enColor2.Green: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 break;
             }
-            case enColor2.Yellow: {
+            case cbit_en.enColor2.Yellow: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 break;
