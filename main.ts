@@ -1,6 +1,6 @@
 /*
 R
-modified from mjm
+modified from liusen
 load dependency
 "cbit": "file:../pxt-cbit"
 */
@@ -8,8 +8,8 @@ load dependency
 
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace cbit_display {
-
+namespace cbit_显示类 {
+    
     export enum enColor {
 
         //% blockId="OFF" block="灭"
@@ -30,6 +30,7 @@ namespace cbit_display {
         Yellow,
 
     }
+
     export enum enColor2 {
 
         //% blockId="OFF" block="灭"
@@ -172,7 +173,6 @@ namespace cbit_display {
     //% weight=6
     //% blockGap=8
     //% color="#C814B8"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor2): void {
 
         switch (value) {
@@ -206,7 +206,7 @@ namespace cbit_display {
  ****************************************************************************************************************************************/
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace cbit_sensor {
+namespace cbit_传感器类 {
 
     export enum enVoice {
         //% blockId="Voice" block="有声音"
@@ -304,7 +304,7 @@ namespace cbit_sensor {
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace cbit_input {
+namespace cbit_输入类 {
 
     export enum enRocker {
         //% blockId="Nostate" block="无"
@@ -415,7 +415,7 @@ namespace cbit_input {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace cbit_music {
+namespace cbit_音乐类 {
     export enum enBuzzer {
 
         //% blockId="NoBeep" block="响"
@@ -444,7 +444,7 @@ namespace cbit_music {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace cbit_motor {
+namespace cbit_电机类 {
 
     //% blockId=cbit_Fan block="风扇|引脚 %pin|速度 %value"
     //% weight=100
@@ -473,7 +473,7 @@ namespace cbit_motor {
 }
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace cbit_car {
+namespace cbit_小车类 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
