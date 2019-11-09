@@ -30,6 +30,18 @@ namespace cbit_显示类 {
         Yellow,
 
     }
+    export enum enColor2 {
+
+        //% blockId="OFF" block="灭"
+        OFF = 0,
+        //% blockId="Red" block="红色"
+        Red,
+        //% blockId="Green" block="绿色"
+        Green,
+        //% blockId="Green" block="黄色"
+        Yellow,
+
+    }
     export enum enLED1 {
         
         //% blockId="OFF" block="灭"
@@ -155,25 +167,31 @@ namespace cbit_显示类 {
 
     }
 
-    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor): void {
+    //% blockId=cbit_RGB3 block="红绿灯|引脚R %pin1|引脚G %pin2|显示 %value"
+    //% weight=1
+    //% blockGap=8
+    //% color="#C814B8"
+    //% inlineInputMode=inline
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function RGB3(pin1: DigitalPin, pin2: DigitalPin, value: enColor2): void {
 
         switch (value) {
-            case enColor.OFF: {
+            case enColor2.OFF: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case enColor.Red: {
+            case enColor2.Red: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 0);
                 break;
             }
-            case enColor.Green: {
+            case enColor2.Green: {
                 pins.digitalWritePin(pin1, 0);
                 pins.digitalWritePin(pin2, 1);
                 break;
             }
-            case enColor.Yellow: {
+            case enColor2.Yellow: {
                 pins.digitalWritePin(pin1, 1);
                 pins.digitalWritePin(pin2, 1);
                 break;
