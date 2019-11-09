@@ -1,0 +1,21 @@
+{
+    "name": "cBit",
+    "version": "2.0.0",
+    "description": "Extension for ZYRobot micro:bit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.10",
+        "cbit_IR":  "github:kujnhy/LCBit_IR"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/cbit-strings.json"
+
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
